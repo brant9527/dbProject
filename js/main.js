@@ -43,7 +43,7 @@ function sign(orderNum, userName, phoneNum) {
 		dataType: 'json',
 		success: function (data) {
 			if (data.code == 1) {
-				pageInOut('m0', 'm1')
+				pageInOut('m1', 'm0')
 				$('.m1 .code').text('抽奖码：' + data.data)
 			} else if (data.code == 0) {
 				tip('请勿重复报名')
@@ -94,7 +94,6 @@ $('.m0 .btn').on('touchstart', function (event) {
 		tip('请输入联系人')
 		return false
 	}
-	pageInOut('m1', 'm0')
 	sign(orderNum, name, phone)
 
 	return false
