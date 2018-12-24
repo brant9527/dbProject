@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="browsermode" content="application"/>
-    <title>大白活动</title>
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>diiib大白暖粉圣诞大礼，装满你的圣诞袜！</title>
     <script type="text/javascript" charset="utf-8">
         (function (doc) {
             // 计算屏幕scale
@@ -19,11 +19,11 @@
                 _scale + ', minimum-scale=' + _scale + ', maximum-scale=' + _scale + ', user-scalable=no');
         })(document);
     </script>
-    <link rel="stylesheet" href="./css/main.css" />
+
 </head>
 
 <body>
-    <div class="div divbg div1 m0 none">
+    <div class="divbg div1 m0 none">
         <div class="logo">
             <img src="./imgs/img-logo.png" alt="">
         </div>
@@ -36,14 +36,14 @@
                     <img src="./imgs/maozi.png" alt="">
                 </div>
                 <label for="orderNum">订单号</label>
-                <input id="orderNum"  type="number">
+                <input id="orderNum" type="text" type="number">
             </div>
             <div class="input">
                 <div class="icon">
                     <img src="./imgs/maozi.png" alt="">
                 </div>
                 <label for="name">姓名</label>
-                <input type="text" id="name" >
+                <input type="text" id="name" type="number">
 
             </div>
             <div class="input">
@@ -51,7 +51,7 @@
                     <img src="./imgs/maozi.png" alt="">
                 </div>
                 <label for="phone">联系电话</label>
-                <input  id="phone" type="number">
+                <input type="text" id="phone" type="number">
             </div>
             <div class="btn">提交抽奖</div>
             <div class="btn-search">查询中奖结果</div>
@@ -59,7 +59,7 @@
 
     </div>
     <!-- 查看抽奖码 -->
-    <div class="div divbg div2 m1 none">
+    <div class="divbg div2 m1 none">
         <div class="logo">
             <img src="./imgs/img-logo.png" alt="">
         </div>
@@ -75,7 +75,7 @@
                 <div class="code">
                     抽奖码：XXXX
                 </div>
-                <div class="content">注：我们将于1月2日开奖，届时请再次点击本链接查询获奖情况，我们也将在微信公众号内公布中奖名单，别忘了来查询哦！</div>
+                <div class="content">注：我们将于12月31日开奖，届时请再次点击本链接查询获奖情况，我们也将在微信公众号内公布中奖名单，别忘了来查询哦！</div>
                 <div class="ewm">
                     <img src="./imgs/ewm.png" alt="">
                 </div>
@@ -87,7 +87,7 @@
         </div>
     </div>
     <!-- 中奖页面 -->
-    <div class="div divbg div2 m2 none">
+    <div class="divbg div2 m2 none">
         <div class="logo">
             <img src="./imgs/img-logo.png" alt="">
         </div>
@@ -98,11 +98,8 @@
             <img src="./imgs/kuang.jpg" alt="" class="bg">
             <div class="wrapper">
                 <div class="title-success">
-                    恭喜您
+                     恭喜您，中奖啦！
                 </div>
-                <div class="title-success-how">
-                    获得二等奖
-               </div>
                 <div class="content-word">我们的工作人员将会在7个工作日内与您电话联系，请您在近期保持电话通畅。</div>
                 <div class="content-word">别忘了持续关注【diiib大白】微信公众号 还有更多惊喜等着你哦！</div>
                 <div class="ewm">
@@ -117,7 +114,7 @@
         </div>
     </div>
     <!-- 没中奖页面 -->
-    <div class="div divbg div2 m3 none">
+    <div class="divbg div2 m3 none">
         <div class="logo">
             <img src="./imgs/img-logo.png" alt="">
         </div>
@@ -150,7 +147,7 @@
     <div class="div tip-search none">
         <div class="shadow div"></div>
         <div class="tip-input webkit50">
-            <input id="input-search" type="number" class="input-search" placeholder="输入提交的手机号码进行查询">
+            <input type="text" id="searchNum" class="input-search" placeholder="输入提交的手机号码进行查询">
             <div class="btn-s">查询</div>
         </div>
     
@@ -158,4 +155,6 @@
 </body>
 <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 <script src="./js/main.js"></script>
+
+
 </html>
