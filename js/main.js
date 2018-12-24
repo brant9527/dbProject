@@ -75,7 +75,7 @@ function check(phoneNum) {
 	})
 }
 
-$('.m0 .btn').on('touchstart', function (event) {
+$('.m0 .btn').on('click', function (event) {
 
 	let orderNum = $('#orderNum').val()
 	let phone = $('#phone').val()
