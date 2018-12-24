@@ -73,7 +73,6 @@ function check(phoneNum) {
 					} else if(data.data.priceType ==2){
 						$('.title-success-how').text('获得二等奖B套餐')
 					}
-					$('.title-success-how').text('获得二等奖！')
 				} else if(data.data.type ==3){
 					pageInOut('m2', 'm0')
 					if(data.data.priceType ==1){
