@@ -360,7 +360,7 @@ input[type="date"]::-webkit-clear-button {
 	-webkit-transform: translate(-50%, -50%);
 }
 .m1 .tip-copy{
-	font-size: 26px;
+	font-size: 18px;
 	margin: 12px 0;
 	line-height: 35px;
 }
