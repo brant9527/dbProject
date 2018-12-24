@@ -74,6 +74,7 @@ function check(phoneNum) {
 		}
 	})
 }
+
 $('.m0 .btn').on('touchstart', function (event) {
 
 	let orderNum = $('#orderNum').val()
