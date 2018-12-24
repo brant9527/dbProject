@@ -123,7 +123,7 @@ $('.m0 .btn-search').on('touchstart', function (event) {
 	return false
 })
 $('.tip-search .btn-s').on('touchstart', function (event) {
-	let searchNum = $('#input-search').val()
+	let searchNum = $('#searchNum').val()
 	check(searchNum)
 	return false
 })
