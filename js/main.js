@@ -61,6 +61,7 @@ function check(phoneNum) {
 			if (data.code == 1) {
 				pageInOut('m3', 'm0')
 			} else if (data.code == 0) {
+				$('.tip-search').hide()
 				tip(data.message)
 			} else if (data.code == 2) {
 				//中奖页面
@@ -114,7 +115,6 @@ function tip(str) {
 	$('.tip .tip-word').text(str)
 }
 $('input').on('blur',function(){
-	console.log(1)
 	document.body.scrollTop = 0
 })
 pageInOut('m0')
