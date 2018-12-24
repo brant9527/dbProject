@@ -1,7 +1,7 @@
 // $(document).on("touchmove", function(e){e.preventDefault();});
-// document.body.addEventListener('touchmove', function (e) {
-// 			e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-// 		}, {passive: false});
+document.body.addEventListener('touchmove', function (e) {
+			e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+		}, {passive: false});
 var fadeTime = 500
 var $width = $(window).width();
 var $height = $(window).height();
@@ -17,7 +17,7 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 var inputname = ''
 $(".div").width($width).height($height);
 // https://test.yuyixm.com/api/paragon/midautumn https://test.yuyixm.com/midautumn/
-var requestUrl = 'http://www.meinefrau.com:8080'
+var requestUrl = 'http://www.meinefrau.com:8080/'
 
 
 
@@ -103,7 +103,7 @@ $('.m0 .btn-search').on('touchstart', function (event) {
 	return false
 })
 $('.tip-search .btn-s').on('touchstart', function (event) {
-	let searchNum = $('#searchNum').val()
+	let searchNum = $('#input-search').val()
 	check(searchNum)
 	return false
 })
