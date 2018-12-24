@@ -119,7 +119,7 @@ var timer =''
 $('input').on('blur',function(){
 	timer =setTimeout(function(){
 		document.body.scrollTop = 0
-	},500)
+	},100)
 	
 })
 $('input').on('focus',function(){
