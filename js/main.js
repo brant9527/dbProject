@@ -115,7 +115,18 @@ function tip(str) {
 	$('.tip').show()
 	$('.tip .tip-word').text(str)
 }
+var timer =''
 $('input').on('blur',function(){
-	document.body.scrollTop = 0
+	timer =setTimeout(function(){
+		document.body.scrollTop = 0
+	},500)
+	
 })
+$('input').on('focus',function(){
+	if(timer){
+		clearTimeout(timer)
+	}
+	
+})
+
 pageInOut('m0')
