@@ -30,6 +30,7 @@ function sign(orderNum, userName, phoneNum) {
 	$.ajax({
 		url: requestUrl + 'api/draw/sign',
 		type: 'post',
+		contentType: 'application/json',
 		data: {
 			phoneNum: phoneNum,
 			userName: userName,
@@ -37,6 +38,7 @@ function sign(orderNum, userName, phoneNum) {
 		},
 		dataType: 'json',
 		success: function (data) {
+			requestFlag = false
 			if (data.code == 1) {
 				pageInOut('m1', 'm0')
 				$('.m1 .code').text('抽奖码：' + data.data)
@@ -45,7 +47,7 @@ function sign(orderNum, userName, phoneNum) {
 			}
 		},
 		error: function (data) {
-
+			requestFlag = false
 		}
 	})
 }
@@ -58,7 +60,7 @@ function check(phoneNum) {
 		},
 		dataType: 'json',
 		success: function (data) {
-			requestFlag = true
+			
 			if (data.code == 1) {
 				pageInOut('m3', 'm0')
 			} else if (data.code == 0) {
@@ -70,15 +72,16 @@ function check(phoneNum) {
 			}
 		},
 		error: function (data) {
-			requestFlag = true
+			
 		}
 	})
 }
 var requestFlag = false
 $('.m0 .btn').on('click', function (event) {
-	if(!requestFlag){
+	if(requestFlag){
 		return false
 	}
+	requestFlag=true
 	let orderNum = $('#orderNum').val()
 	let phone = $('#phone').val()
 	let name = $('#name').val()
