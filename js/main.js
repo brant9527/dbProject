@@ -1,7 +1,7 @@
 // $(document).on("touchmove", function(e){e.preventDefault();});
-document.body.addEventListener('touchmove', function (e) {
-			e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-		}, {passive: false});
+// document.body.addEventListener('touchmove', function (e) {
+// 			e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+// 		}, {passive: false});
 var fadeTime = 500
 var $width = $(window).width();
 var $height = $(window).height();
@@ -61,7 +61,7 @@ function check(phoneNum) {
 			if (data.code == 1) {
 				pageInOut('m3', 'm0')
 			} else if (data.code == 0) {
-				tip('暂未开奖')
+				tip(data.message)
 			} else if (data.code == 2) {
 				//中奖页面
 				pageInOut('m2', 'm0')
@@ -113,4 +113,8 @@ function tip(str) {
 	$('.tip').show()
 	$('.tip .tip-word').text(str)
 }
+$('input').on('blur',function(){
+	console.log(1)
+	document.body.scrollTop = 0
+})
 pageInOut('m0')
