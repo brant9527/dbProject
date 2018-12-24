@@ -59,6 +59,7 @@ function check(phoneNum) {
 		},
 		dataType: 'json',
 		success: function (data) {
+			requestFlag = true
 			if (data.code == 1) {
 				pageInOut('m3', 'm0')
 			} else if (data.code == 0) {
@@ -70,13 +71,15 @@ function check(phoneNum) {
 			}
 		},
 		error: function (data) {
-
+			requestFlag = true
 		}
 	})
 }
-
+var requestFlag = false
 $('.m0 .btn').on('click', function (event) {
-
+	if(!requestFlag){
+		return false
+	}
 	let orderNum = $('#orderNum').val()
 	let phone = $('#phone').val()
 	let name = $('#name').val()
