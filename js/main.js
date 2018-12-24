@@ -38,16 +38,16 @@ function sign(orderNum, userName, phoneNum) {
 		contentType: "application/json;charset=UTF-8",
 		dataType: 'json',
 		success: function (data) {
-			requestFlag = false
+
 			if (data.code == 1) {
 				pageInOut('m1', 'm0')
 				$('.m1 .code').text('抽奖码：' + data.data)
-			} else if (data.code == 0) {
-				tip('请勿重复报名')
+			} else {
+				tip(data.message)
 			}
 		},
 		error: function (data) {
-			requestFlag = false
+
 		}
 	})
 }
@@ -98,12 +98,8 @@ function check(phoneNum) {
 		}
 	})
 }
-var requestFlag = false
 $('.m0 .btn').on('click', function (event) {
-	if(requestFlag){
-		return false
-	}
-	requestFlag=true
+
 	let orderNum = $('#orderNum').val()
 	let phone = $('#phone').val()
 	let name = $('#name').val()
