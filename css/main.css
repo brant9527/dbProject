@@ -280,26 +280,26 @@ input[type="date"]::-webkit-clear-button {
 	left:13px;
 }
 .m0 .btn{
-	width: 150px;
+	width: 190px;
 	height: 50px;
 	line-height: 50px;
 	margin: 30px auto;
 	background-color: #fff;
 	border-radius: 10px;
 	color: #df2227;
-	font-size: 20px;
+	font-size: 28px;
 	vertical-align: middle;
 	text-align: center;
 }
 .m0 .btn-search{
-	width: 150px;
+	width: 190px;
 	height: 50px;
 	line-height: 50px;
 	margin: 30px auto;
 	background-color: #fff;
 	border-radius: 10px;
 	color: #df2227;
-	font-size: 20px;
+	font-size: 28px;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -328,23 +328,25 @@ input[type="date"]::-webkit-clear-button {
 	padding: 0 40px;
 }
 .result .title{
-	font-size: 25px;
+	font-size: 32px;
 	color: #c7181f;
 	text-align: center;
-	margin: 70px 0 20px ;
+	margin: 25px 0 20px;
+	font-weight: bolder;
 	
 }
 .result .code {
-	font-size: 25px;
+	font-size: 38px;
 	color: #c7181f;
-
+	font-weight: bold;
 	text-align: center;
 }
 .result .content {
-	font-size: 21px;
-	color: #000;
-	margin: 50px 0 50px;
-	text-align: center;
+	font-size: 26px;
+    color: #000;
+    margin: 20px 0 40px;
+    text-align: justify;
+    line-height: 34px;
 }
 .result .ewm{
 	width: 99px;
@@ -375,13 +377,23 @@ input[type="date"]::-webkit-clear-button {
 	font-size: 38px;
 	color: #c7181f;
 	text-align: center;
-	margin: 50px 0 44px;
+	margin: 25px 0 0;
+	font-weight: bolder;
+}
+.m2 .result .title-success-how{
+	font-size: 38px;
+	color: #c7181f;
+	text-align: center;
+	margin: 12px 0 12px;
+	font-weight: bolder;
 }
 .m2 .result .content-word{
 	text-align: center;
-	font-size: 21px;
+	font-size: 26px;
 	color: #010101;
-	margin: 36px auto
+	margin: 12px auto;
+	line-height: 34px;
+	text-align: justify;
 }
 .m3 .result .title-faild {
 	font-size: 38px;

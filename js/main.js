@@ -60,16 +60,38 @@ function check(phoneNum) {
 		},
 		dataType: 'json',
 		success: function (data) {
-			
+			$('.tip-search').hide()
 			if (data.code == 1) {
-				pageInOut('m3', 'm0')
-			} else if (data.code == 0) {
-				$('.tip-search').hide()
+				if(data.data.type ==1){
+					pageInOut('m2', 'm0')
+					
+					$('.title-success-how').text('获得一等奖！')
+				} else if(data.data.type ==2){
+					pageInOut('m2', 'm0')
+					if(data.data.priceType ==1){
+						$('.title-success-how').text('获得二等奖A套餐')
+					} else if(data.data.priceType ==2){
+						$('.title-success-how').text('获得二等奖B套餐')
+					}
+					$('.title-success-how').text('获得二等奖！')
+				} else if(data.data.type ==3){
+					pageInOut('m2', 'm0')
+					if(data.data.priceType ==1){
+						$('.title-success-how').text('获得三等奖A套餐')
+					} else if(data.data.priceType ==2){
+						$('.title-success-how').text('获得三等奖B套餐')
+					}else if(data.data.priceType ==3){
+						$('.title-success-how').text('获得三等奖C套餐')
+					}
+				} else if(data.data.type ==0){
+					pageInOut('m3', 'm0')
+				} 
+				
+			} else {
 				tip(data.message)
-			} else if (data.code == 2) {
-				//中奖页面
-				pageInOut('m2', 'm0')
 			}
+			
+			
 		},
 		error: function (data) {
 			
