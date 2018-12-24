@@ -55,12 +55,12 @@ function sign(orderNum, userName, phoneNum) {
 		}
 	})
 }
-function check(phoneNum) {
+function check(luckNum) {
 	$.ajax({
 		url: requestUrl + 'api/draw/check',
 		type: 'get',
 		data: {
-			phoneNum: phoneNum
+			luckNum: luckNum
 		},
 		dataType: 'json',
 		success: function (data) {
