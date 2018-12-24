@@ -19,6 +19,10 @@ var requestUrl = 'http://www.meinefrau.cn:8080/'
 
 function pageInOut(pagein, pageout) {
 	$("." + pagein).show().addClass('activein active');
+	if (pageout){
+		$('.' + pageout).addClass('activeout')
+	}
+
 	(function (pageout) {
 		setTimeout(function () {
 			$("." + pageout).hide().removeClass('activeout activein active');
@@ -151,5 +155,19 @@ $('input').on('focus',function(){
 	}
 	
 })
-
+$('.back').on('touchstart',function(){
+	if ($(this).parent().hasClass('m2')){
+		pageInOut('m0','m2')
+	} else if ($(this).parent().hasClass('m3')){
+		pageInOut('m0', 'm3')
+	} else if ($(this).parent().hasClass('m1')){
+		pageInOut('m0', 'm1')
+	}
+	reset()
+})
+function reset(){
+	 $('#orderNum').val('')
+	$('#phone').val('')
+	$('#name').val('')
+}
 pageInOut('m0')

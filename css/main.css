@@ -344,7 +344,7 @@ input[type="date"]::-webkit-clear-button {
 .result .content {
 	font-size: 26px;
     color: #000;
-    margin: 20px 0 40px;
+    margin: 20px 0 20px;
     text-align: justify;
     line-height: 34px;
 }
@@ -358,6 +358,11 @@ input[type="date"]::-webkit-clear-button {
 	left: 50%;
 	width: 540px;
 	-webkit-transform: translate(-50%, -50%);
+}
+.m1 .tip-copy{
+	font-size: 26px;
+	margin: 12px 0;
+	line-height: 35px;
 }
 .m2 .word {
 	width: 384px;
@@ -437,7 +442,7 @@ input[type="date"]::-webkit-clear-button {
 
 .activeout {
 	display: block !important;
-	-webkit-animation: anm-hide 0.5s 0.25s linear both;
+	-webkit-animation: anm-hide 0.5s 0.1s linear both;
 	-webkit-transform: translateZ;
 	will-change: transform;
 }
@@ -469,6 +474,21 @@ input[type="date"]::-webkit-clear-button {
 }
 .tip,.tip-search{
 	z-index: 1;
+}
+.back{
+	background-color: white;
+	width: 100px;
+	line-height: 40px;
+	position: absolute;
+	top: 5%;
+	left: 15%;
+	transform: translate(-50%,-50%);
+	color: #c7181f;
+	border-radius: 10px; 
+	border-radius: 10px;
+	font-size: 24px;
+	vertical-align: middle;
+	text-align: center;
 }
 @-webkit-keyframes anm-up-tip {
 	0% {
