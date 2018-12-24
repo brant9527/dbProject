@@ -30,7 +30,6 @@ function sign(orderNum, userName, phoneNum) {
 	$.ajax({
 		url: requestUrl + 'api/draw/sign',
 		type: 'post',
-		contentType: 'application/json',
 		data: {
 			phoneNum: phoneNum,
 			userName: userName,
