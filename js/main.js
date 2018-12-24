@@ -5,11 +5,6 @@ document.body.addEventListener('touchmove', function (e) {
 var fadeTime = 500
 var $width = $(window).width();
 var $height = $(window).height();
-var numScale = $width * 0.32 * 1 / 130;
-var scale = $width / 650;
-var scaleH = $height / 1040;
-var ismusic = true;
-var isphoneplay;
 var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 
@@ -17,7 +12,7 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 var inputname = ''
 $(".div").width($width).height($height);
 // https://test.yuyixm.com/api/paragon/midautumn https://test.yuyixm.com/midautumn/
-var requestUrl = 'http://www.meinefrau.com:8080/'
+var requestUrl = 'http://www.meinefrau.cn:8080/'
 
 
 
